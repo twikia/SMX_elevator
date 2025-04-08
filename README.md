@@ -14,7 +14,7 @@ The elevator will move in the direction of the floor that is after the first flo
 
 The type of call button for this elevator is single because it doesn't take into account which direction you want to go, only the direction it was already going to fuffil requests.
 
-#Assumptions:
+# Assumptions:
 
 The input list is in order of buttons pressed. The first index is where the elevator is, the second is the oldest request, third is second oldest etc.
 
