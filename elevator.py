@@ -1,4 +1,3 @@
-import math
 import argparse
 
 TIME_PER_FLOOR = 10
@@ -41,7 +40,7 @@ def main(floors: list[int]):
 
     floors = sorted(list(set(floors)))  # Remove duplicates first
     
-    # Split floors into above and below first floor, removing duplicates
+    # Split floors into above and below first floor
     floors_above = [f for f in floors if f > first_floor]
     floors_below = [f for f in floors if f < first_floor]
 
@@ -82,7 +81,6 @@ def main(floors: list[int]):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('floors', type=int, nargs='+', help='A list of numbers seperated by spaces')
-    
     
     args = parser.parse_args()
 
