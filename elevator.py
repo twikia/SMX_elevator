@@ -45,16 +45,16 @@ def main(floors: list[int]):
     floors_below = [f for f in floors if f < first_floor]
 
 
-    if len(floors_above) + len(floors_below) <= 1:
+    if len(floors_above) + len(floors_below) <= 1: # if there is nothing in either array
         return 0, [first_floor]
     
-    if len(floors_above) <= 0:
+    if len(floors_above) <= 0: #if there are no floors above
         return abs(first_floor - floors_below[0]) * TIME_PER_FLOOR, [first_floor] + floors_below[::-1]
     
-    if len(floors_below) <= 0:
+    if len(floors_below) <= 0: #if there are no floors below
         return abs(first_floor - floors_above[-1]) * TIME_PER_FLOOR, [first_floor] + floors_above
     
-    if direction == 1:
+    if direction == 1: #if the next floor is above the current floor
         return (abs(first_floor - floors_above[-1]) + abs(floors_above[-1] - floors_below[0])) * TIME_PER_FLOOR, [first_floor] + floors_above + floors_below[::-1]
 
     return (abs(first_floor - floors_below[0]) + abs(floors_above[-1] - floors_below[0])) * TIME_PER_FLOOR, [first_floor] + floors_below[::-1] + floors_above
