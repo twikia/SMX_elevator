@@ -24,3 +24,9 @@ The input with the exe or script will be in the exact format I need above otherw
 
 # testing
 tests can be run by just running the tester.py, the tests are an array of tuples with the input then the expected time and array output.
+
+# things not implemented
+Direction feature for calling. 
+Calling feature for adding floors at certain times.
+Some parts could be more optimized if there were thousands of floors but that is a bit unrealistic.
+Multiple elevators are not taken into account, only one.
