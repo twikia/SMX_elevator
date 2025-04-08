@@ -10,7 +10,7 @@ Use any array that you want, even negative numbers!
 # behavior
 Elevators travel in the current direction until the furthest floor in that direction is reached.
 
-The elevator will move in the direction of the floor that is after the first floor in the array because that is the button that was requested first. Eg. [5, 5, 4] will move downward.
+The elevator will move in the direction of the floor that is after the first floor in the array because that is the button that was requested first. Eg. [5, 5, 4, 7] will move downward first then will switch once reaching floor 4. [4, 8, 2, 7] will service 7 then 8 switches directions then 2.
 
 The type of call button for this elevator is single because it doesn't take into account which direction you want to go, only the direction it was already going to fuffil requests.
 
@@ -20,7 +20,7 @@ The input list is in order of buttons pressed. The first index is where the elev
 
 The script should be as close as possible to a real life elevator.
 
-The input with the exe or script will be in the exact format I need above otherwise it will output an errora
+The input with the exe or script will be in the exact format I need above otherwise it will output an error.
 
 # testing
 tests can be run by just running the tester.py, the tests are an array of tuples with the input then the expected time and array output.
